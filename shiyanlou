@@ -1,15 +1,52 @@
 how to use github:
 
+avoid key in password for pull/push each time
+#生成公钥和私钥
+1.ssh-keygen -t rsa
+2.将公钥放到github主页上
+3.git config --global user.name "xxxx"
+4.git config --global user.email "xxxx"
+
 1.git clone xxxxx
 2.make some change
 3.git status or diff
 4.git commit -m "descript"
 5.git push [origin master]
+6.git init
 
 #查看分支
 6.git branch
-#切换分支
+#切换分支,如果远程分支和本地分支不同会有提示
 7.git checkout branch_name
-#.将某个分支与当前分支合并
+#.将某个分支与当前分支合并,有可能出现冲突,需要确认冲突文件
 8.git merge -m "descript" branch_name
+#拉取所有分支或某个分支
+9.git pull or git pull origin branch_name
+#提交到某个分支或者同名分支
+10.git push or git push origin branch_name
+#删除某个分支
+11.git branch -d branch_name
+#用当前分支作为副本,创建分支
+12.git branch branch_name
+#查看日志
+13.git log or git log --stat or git log --graph --pretty=oneline
+#撤销一个合并
+14.git reset --hard HEAD^
+#删除某个文件后push
+15.git commit -a然后写上删除文件的说明,不写则不能提交
+
+#注意事项
+1.如果远端有某个文件,本地没有,那么在push之前需要先拉取到本地
+2.如果远端某个文件包含内容是本地没有的,在push之前先拉取到本地
+3.git push把本地仓库所有分支推到远端对应的分支
+4.git push origin master把当前分支推到远端master分支上
+5.注意理解本地工作区、暂存区、本地仓库、远端仓库
+6.一般步骤clone -> change -> add -> commit -> push
+7.git status是查看本地工作区与本地仓库的差别
+8.git diff中a表示前面那个变量,b表示后面那个变量,且他比较的是本地工作区和暂存区之间的差异,但是不包括多出的文件,少的文件会列出来
+9.git diff --cached比较暂存区和本地仓库之间的差异
+10.git diff branch_name当前目录和目标分支的差异
+11.查看简单的diff结果加上--stat参数
+12.git diff b1 b2比较两个分支的差异
+
 
