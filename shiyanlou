@@ -8,5 +8,8 @@ how to use github:
 
 #查看分支
 6.git branch
-
+#切换分支
+7.git checkout branch_name
+#.将某个分支与当前分支合并
+8.git merge -m "descript" branch_name
 
