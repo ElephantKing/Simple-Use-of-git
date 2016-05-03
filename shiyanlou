@@ -1,0 +1,12 @@
+how to use github:
+
+1.git clone xxxxx
+2.make some change
+3.git status or diff
+4.git commit -m "descript"
+5.git push [origin master]
+
+#查看分支
+6.git branch
+
+
