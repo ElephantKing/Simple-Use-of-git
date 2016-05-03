@@ -49,4 +49,6 @@ avoid key in password for pull/push each time
 11.查看简单的diff结果加上--stat参数
 12.git diff b1 b2比较两个分支的差异
 
+#忽略某些文件,让他不被追踪
+在顶层工作目录中添加.gitignore文件,里面支持正则,这个文件里面一行作为一个约定,foo.txt、*.html、*.[ao]、!foo.html
 
