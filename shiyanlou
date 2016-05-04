@@ -15,7 +15,7 @@ avoid key in password for pull/push each time
 6.git init
 
 #查看分支
-6.git branch
+6.git branch or git branch -r查看远程分支 git branch -a查看所有
 #切换分支,如果远程分支和本地分支不同会有提示
 7.git checkout branch_name
 #.将某个分支与当前分支合并,有可能出现冲突,需要确认冲突文件
@@ -27,11 +27,11 @@ avoid key in password for pull/push each time
 #删除某个分支
 11.git branch -d branch_name
 #用当前分支作为副本,创建分支
-12.git branch branch_name
+12.git branch branch_name or git branch -b b1 b2
 #查看日志
 13.git log or git log --stat or git log --graph --pretty=oneline
 #撤销一个合并
-14.git reset --hard HEAD^
+14.git reset --hard HEAD
 #删除某个文件后push
 15.git commit -a然后写上删除文件的说明,不写则不能提交
 
@@ -42,7 +42,7 @@ avoid key in password for pull/push each time
 4.git push origin master把当前分支推到远端master分支上
 5.注意理解本地工作区、暂存区、本地仓库、远端仓库
 6.一般步骤clone -> change -> add -> commit -> push
-7.git status是查看本地工作区与本地仓库的差别
+7.git status是查看本地工作区与暂存区的差别
 8.git diff中a表示前面那个变量,b表示后面那个变量,且他比较的是本地工作区和暂存区之间的差异,但是不包括多出的文件,少的文件会列出来
 9.git diff --cached比较暂存区和本地仓库之间的差异
 10.git diff branch_name当前目录和目标分支的差异
